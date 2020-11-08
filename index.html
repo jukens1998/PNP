@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+</head>
+
+<body>
+    <!-- Nav -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">
+            <img src="assets/Logo/PNP.png" width="70" height="70" alt="" loading="lazy">
+          </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
+            aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+              
+            </ul>
+            <span class="navbar-text">
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#cart">
+                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-cart3" fill="currentColor"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd"
+                            d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm7 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2z" />
+                    </svg>
+                    (<span class="total-count"></span>)
+                </button>
+                <button class="clear-cart btn btn-danger">Clear Cart</button>
+            </span>
+        </div>
+    </nav>
+
+    <header>
+        <div class="container">
+            <div class="row text-center">
+                <div class="col my-4">
+                    <h2>Bienvenido a PnP Food</h2>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main -->
+    <div class="container">
+        <div class="row text-center">
+            <div class="col">
+                <div class="card shadow" style="width: 20rem;">
+                    <img class="card-img-top" src="assets/Food/italian-spaghetti-with-tomato-sauce-pan.jpg"
+                        alt="Card image cap">
+                    <div class="card-block">
+                        <h4 class="card-title">Spaghetti con pasta de tomate</h4>
+                        <p class="card-text">Price: $30000</p>
+                        <a href="#" data-name="Spaghetti" data-price="30000" class="add-to-cart btn btn-primary">Add to
+                            cart</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card shadow" style="width: 20rem;">
+                    <img class="card-img-top"
+                        src="http://images.all-free-download.com/images/graphicthumb/vector_illustration_of_ripe_bananas_567893.jpg"
+                        alt="Card image cap">
+                    <div class="card-block">
+                        <h4 class="card-title">Banana</h4>
+                        <p class="card-text">Price: $1.22</p>
+                        <a href="#" data-name="Banana" data-price="1.22" class="add-to-cart btn btn-primary">Add to
+                            cart</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card shadow" style="width: 20rem;">
+                    <img class="card-img-top" src="https://3.imimg.com/data3/IC/JO/MY-9839190/organic-lemon-250x250.jpg"
+                        alt="Card image cap">
+                    <div class="card-block">
+                        <h4 class="card-title">Lemon</h4>
+                        <p class="card-text">Price: $5</p>
+                        <a href="#" data-name="Lemon" data-price="5" class="add-to-cart btn btn-primary">Add to cart</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="cart" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <h3 class="text-center mt-4">Está es tú orden</h3>
+                <div class="modal-body">
+                    <table class="show-cart table">
+
+                    </table>
+                    <div>Total price: $<span class="total-cart"></span></div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Order now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+        crossorigin="anonymous"></script>
+    <script src="logic.js"></script>
+
+</body>
+
+</html>
